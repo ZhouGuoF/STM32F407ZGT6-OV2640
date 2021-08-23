@@ -1,18 +1,11 @@
-ÊµÑéÆ÷²Ä:
-	Ì½Ë÷ÕßSTM32F4¿ª·¢°å
+å®žéªŒå™¨æ:
+	STM32F407ZGT6+ov2640
 	
-ÊµÑéÄ¿µÄ:
-	Ñ§Ï°STM32F4µÄDCMI½Ó¿ÚºÍOV2640ÉãÏñÍ·Ä£¿éµÄÊ¹ÓÃ.
+
 	
-Ó²¼þ×ÊÔ´:
-	1,DS0(Á¬½ÓÔÚPF9)
-	2,´®¿Ú1(²¨ÌØÂÊ:115200,PA9/PA10Á¬½ÓÔÚ°åÔØUSB×ª´®¿ÚÐ¾Æ¬CH340ÉÏÃæ)
-	3,ALIENTEK 2.8/3.5/4.3/7´çTFTLCDÄ£¿é(Í¨¹ýFSMCÇý¶¯,FSMC_NE4½ÓLCDÆ¬Ñ¡/A6½ÓRS)
-	4,°´¼üKEY0(PE4)/KEY1(PE3) 
-	5,DCMI½Ó¿Ú(ÓÃÓÚÇý¶¯OV2640ÉãÏñÍ·Ä£¿é)
-	6,¶¨Ê±Æ÷3(ÓÃÓÚ´òÓ¡ÉãÏñÍ·Ö¡ÂÊµÈÐÅÏ¢)
-	7,ALIENTEK OV2640ÉãÏñÍ·Ä£¿é,Á¬½Ó¹ØÏµÎª:  
-		OV2640Ä£¿é ------------ STM32¿ª·¢°å
+ç¡¬ä»¶èµ„æº:
+
+		OV2640æ¨¡å— ------------ STM32å¼€å‘æ¿
 		 OV_D0~D7  ------------  PE6/PE5/PB6/PC11/PC9/PC8/PC7/PC6
 		 OV_SCL    ------------  PD6
 		 OV_SDA    ------------  PD7
@@ -21,42 +14,13 @@
 		 OV_RESET  ------------  PG15
 		 OV_PCLK   ------------  PA6
 		 OV_PWDN   ------------  PG9 
+		 
+ä¸Šä½æœºæ˜¯ç”¨Qtå†™çš„ï¼Œä½¿ç”¨äº†MQTTåè®®è¿žæŽ¥é˜¿é‡Œäº‘ç‰©è”ç½‘å¹³å°ã€‚
 
-ÊµÑéÏÖÏó:
-	±¾ÊµÑé¿ª»úºó£¬³õÊ¼»¯ÉãÏñÍ·Ä£¿é£¨OV2640£©£¬Èç¹û³õÊ¼»¯³É¹¦£¬ÔòÌáÊ¾Ñ¡ÔñÄ£Ê½£ºRGB565Ä£Ê½£¬»òÕß
-	JPEGÄ£Ê½¡£KEY0ÓÃÓÚÑ¡ÔñRGB565Ä£Ê½£¬KEY1ÓÃÓÚÑ¡ÔñJPEGÄ£Ê½¡£
-	
-    µ±Ê¹ÓÃRGB565Ê±£¬Êä³öÍ¼Ïñ£¨¹Ì¶¨Îª£ºUXGA£©½«¾­¹ýËõ·Å´¦Àí£¨ÍêÈ«ÓÉOV2640µÄDSP¿ØÖÆ£©£¬ÏÔÊ¾ÔÚLCD
-	ÉÏÃæ¡£ÎÒÃÇ¿ÉÒÔÍ¨¹ýKEY_UP°´¼üÑ¡Ôñ£º1:1ÏÔÊ¾£¬¼´²»Ëõ·Å£¬Í¼Æ¬²»±äÐÎ£¬µ«ÊÇÏÔÊ¾ÇøÓòÐ¡£¨Òº¾§·Ö±æÂÊ
-	´óÐ¡£©£¬»òÕßËõ·ÅÏÔÊ¾£¬¼´½«1600*1200µÄÍ¼ÏñÑ¹Ëõµ½Òº¾§·Ö±æÂÊ³ß´çÏÔÊ¾£¬Í¼Æ¬±äÐÎ£¬µ«ÊÇÏÔÊ¾ÁËÕû¸ö
-	Í¼Æ¬ÄÚÈÝ¡£Í¨¹ýKE0Y°´¼ü£¬¿ÉÒÔÉèÖÃ¶Ô±È¶È£»KEY1°´¼ü£¬¿ÉÒÔÉèÖÃ±¥ºÍ¶È£»KEY2°´¼ü£¬¿ÉÒÔÉèÖÃÌØÐ§¡£
 
-    µ±Ê¹ÓÃJPEGÄ£Ê½Ê±£¬Í¼Ïñ¿ÉÒÔÉèÖÃÈÎÒâ³ß´ç£¨QQVGA~UXGA£©£¬²É¼¯µ½µÄJPEGÊý¾Ý½«ÏÈ´æ·Åµ½STM32F4µÄÄÚ
-	´æÀïÃæ£¬Ã¿µ±²É¼¯µ½Ò»Ö¡Êý¾Ý£¬¾Í»á¹Ø±ÕDMA´«Êä£¬È»ºó½«²É¼¯µ½µÄÊý¾Ý·¢ËÍµ½´®¿Ú2£¨´ËÊ±¿ÉÒÔÍ¨¹ýÉÏÎ»
-	»úÈí¼þ£¨´®¿ÚÉãÏñÍ·.exe£©½ÓÊÕ£¬²¢ÏÔÊ¾Í¼Æ¬£©£¬Ö®ºóÔÙÖØÐÂÆô¶¯DMA´«Êä¡£ÎÒÃÇ¿ÉÒÔÍ¨¹ýKEY_UPÉèÖÃÊä
-	³öÍ¼Æ¬µÄ³ß´ç£¨QQVGA~UXGA£©¡£Í¨¹ýKEY0°´¼ü£¬¿ÉÒÔÉèÖÃ¶Ô±È¶È£»KEY1°´¼ü£¬¿ÉÒÔÉèÖÃ±¥ºÍ¶È£»KEY2°´
-	¼ü£¬¿ÉÒÔÉèÖÃÌØÐ§¡£
-    
-    Í¬Ê±Ê±¿ÉÒÔÍ¨¹ý´®¿Ú1£¬½èÖúUSMARTÉèÖÃ/¶ÁÈ¡OV2640µÄ¼Ä´æÆ÷£¬·½±ã´ó¼Òµ÷ÊÔ¡£DS0Ö¸Ê¾³ÌÐòÔËÐÐ×´Ì¬£¬
-	DS1ÓÃÓÚÖ¸Ê¾Ö¡ÖÐ¶Ï¡£
-   
-×¢ÒâÊÂÏî: 
-	1,4.3´çºÍ7´çÆÁÐèÒª±È½Ï´óµçÁ÷,USB¹©µç¿ÉÄÜ²»×ã,ÇëÓÃÍâ²¿µçÔ´ÊÊÅäÆ÷(ÍÆ¼öÍâ½Ó12V 1AµçÔ´).
-	2,±¾Àý³ÌÔÚLCD_Initº¯ÊýÀïÃæ(ÔÚILI93xx.c),ÓÃµ½ÁËprintf,Èç¹û²»³õÊ¼»¯´®¿Ú1,½«µ¼ÖÂÒº¾§ÎÞ·¨ÏÔÊ¾!!  
-	3,±¾ÊµÑéÐèÒª×Ô±¸ALIENTEK OV2640ÉãÏñÍ·Ä£¿éÒ»¸ö.
-	
 
-					ÕýµãÔ­×Ó@ALIENTEK
-					2014-10-25
-					¹ãÖÝÊÐÐÇÒíµç×Ó¿Æ¼¼ÓÐÏÞ¹«Ë¾
-					µç»°£º020-38271790
-					´«Õæ£º020-36773971
-					¹ºÂò£ºhttp://shop62103354.taobao.com
-					http://shop62057469.taobao.com
-					¹«Ë¾ÍøÕ¾£ºwww.alientek.com
-					¼¼ÊõÂÛÌ³£ºwww.openedv.com
-					
-					
+
+								
 					
 					
 					
